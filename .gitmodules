@@ -1,0 +1,3 @@
+[submodule "youtube-livechat-scraper"]
+	path = youtube-livechat-scraper
+	url = https://github.com/ohn0/youtube-livechat-scraper
