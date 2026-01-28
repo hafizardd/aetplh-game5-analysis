@@ -1,4 +1,4 @@
-event_id,waktu,event,team,detail
+event_id,timestamp,event,team,detail
 E01,3:25:30,draft_dimulai,NA,Fase draft Game 5 dimulai
 E02,3:26:17,draft_pick,Alter Ego,Alter Ego memilih hero Uranus
 E03,3:29:27,draft_unpredictable,Alter Ego,Uranus digunakan sebagai jungler dan draft selesai

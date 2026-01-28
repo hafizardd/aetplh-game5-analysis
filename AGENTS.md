@@ -4,12 +4,12 @@ Guidelines for agentic coding agents working in this repository.
 
 ## Project Overview
 
-This is a Python data analysis project for YouTube live chat game analysis (aetplh-game5-analysis). It includes:
+This is a Python data analysis project for YouTube live chat game analysis. It includes:
 - **Main project**: Data analysis using numpy, pandas, matplotlib, seaborn
-- **youtube-livechat-scraper**: A submodule for scraping YouTube live chat data
+- **youtube-live-scrapers**: A git submodule for scraping YouTube live chat data
 - **Notebooks**: Jupyter notebooks in `notebooks/` for interactive analysis
 
-Python version: **3.10+** (required by youtube-livechat-scraper)
+Python version: **3.10+** (required by youtube-live-scrapers submodule)
 
 ## Build/Lint/Test Commands
 
@@ -23,18 +23,15 @@ source .venv/bin/activate     # Linux/macOS
 # Install dependencies
 pip install -r requirements.txt
 
-# Install youtube-livechat-scraper in development mode
-pip install -e youtube-livechat-scraper/
+# Install youtube-live-scrapers in development mode
+pip install -e youtube-live-scrapers/
 ```
 
 ### Running Code
 ```bash
-# Run Python scripts
-python script_name.py
-
 # Run the livechat scraper example
-python youtube-livechat-scraper/example.py <video_url>
-python youtube-livechat-scraper/example.py <video_url> <start_time> <end_time>
+python youtube-live-scrapers/example.py <video_url>
+python youtube-live-scrapers/example.py <video_url> <start_time> <end_time>
 
 # Run Jupyter notebooks
 jupyter notebook notebooks/scraping.ipynb
@@ -51,11 +48,11 @@ pytest tests/test_file.py
 # Run a single test function
 pytest tests/test_file.py::test_function_name
 
-# Run tests with verbose output
-pytest -v
-
 # Run tests matching a pattern
 pytest -k "test_pattern"
+
+# Run with verbose output
+pytest -v
 
 # Run with coverage
 pytest --cov=. --cov-report=term-missing
@@ -84,6 +81,7 @@ mypy . --ignore-missing-imports
 ```python
 # 1. Standard library imports
 import sys
+import json
 import time
 from math import floor
 from typing import Optional, List, Dict
@@ -91,8 +89,6 @@ from typing import Optional, List, Dict
 # 2. Third-party imports
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 import requests
 from bs4 import BeautifulSoup
 
@@ -104,7 +100,6 @@ from livechat_scraper.constants import scraper_constants as sCons
 ### Type Hints
 - Use type hints for all function parameters and return values
 - Use `Optional[T]` for nullable parameters
-- Import from typing module as needed
 ```python
 def process_data(data: pd.DataFrame, config: Dict[str, str]) -> Optional[pd.DataFrame]:
     """Process the input data according to configuration."""
@@ -138,6 +133,7 @@ def parse_time_to_ms(time_str: str) -> int:
 - Use specific exceptions, not bare `except:`
 - Include meaningful error messages with context
 - Use try-except for external operations (network, file I/O)
+- Always use timeouts for network requests
 ```python
 try:
     response = requests.get(url, timeout=10)
@@ -147,26 +143,27 @@ except requests.RequestException as e:
     return None
 ```
 
-### Data Analysis Patterns
-- Use pandas DataFrames for tabular data
-- Prefer numpy vectorized operations over loops
-- Create reusable plotting functions
-- Validate data before processing
-
 ## File Organization
 ```
 aetplh-game5-analysis/
-├── notebooks/           # Jupyter notebooks for analysis
-├── youtube-livechat-scraper/  # Submodule for scraping
+├── notebooks/               # Jupyter notebooks for analysis
+│   ├── scraping.ipynb      # Live chat scraping workflow
+│   ├── json_to_csv.ipynb   # Data conversion
+│   └── sentiment.ipynb     # Sentiment analysis
+├── youtube-live-scrapers/   # Git submodule for scraping
 │   ├── livechat_scraper/
-│   │   ├── scrapers/    # Scraper classes
-│   │   ├── builders/    # Data builders
-│   │   ├── constants/   # Constants and config
-│   │   └── generators/  # Output generators
-│   └── example.py       # Usage examples
-├── data/                # Data files (gitignored)
-├── requirements.txt     # Project dependencies
-└── AGENTS.md           # This file
+│   │   ├── scrapers/       # Scraper classes
+│   │   ├── parsers/        # Response parsers
+│   │   ├── requestors/     # HTTP request handlers
+│   │   ├── builders/       # Data builders
+│   │   ├── generators/     # Output generators
+│   │   └── constants/      # Constants and config
+│   └── example.py          # Usage examples
+├── data/
+│   ├── raw/                # Raw scraped JSON files
+│   └── processed/          # Processed CSV files
+├── requirements.txt        # Project dependencies
+└── AGENTS.md              # This file
 ```
 
 ## Git Workflow
@@ -179,9 +176,8 @@ aetplh-game5-analysis/
 - Never commit API keys or credentials
 - Use environment variables for sensitive config
 - Validate all external data inputs
-- Always use timeouts for network requests
 
-## Performance
+## Performance Tips
 - Use vectorized numpy/pandas operations over loops
 - Consider memory usage for large datasets
 - Profile code with `cProfile` when performance is critical
