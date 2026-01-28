@@ -1,0 +1,23 @@
+event_id,timestamp,event,team,detail,category,window_seconds,total_comments,positive,negative,neutral,sentiment_score
+E01,0,draft_dimulai,,Fase draft Game 5 dimulai,minor,30,261,82,124,55,-0.1609
+E02,47,draft_pick,Alter Ego,Alter Ego memilih hero Uranus,minor,30,556,167,306,83,-0.25
+E03,237,draft_unpredictable,Alter Ego,Uranus digunakan sebagai jungler dan draft selesai,medium,60,1095,439,492,164,-0.0484
+E04,404,turtle_spawn_1,,Turtle pertama muncul,minor,30,494,219,222,53,-0.0061
+E05,413,first_blood,Team Liquid,Team Liquid mendapatkan first blood sekaligus turtle pertama,medium,60,1120,474,515,131,-0.0366
+E06,623,first_turret,Team Liquid,Team Liquid menghancurkan turret pertama,medium,60,1298,413,748,137,-0.2581
+E07,640,kill,Alter Ego,Kill pertama untuk Alter Ego,minor,30,664,215,370,79,-0.2334
+E08,649,skirmish_trade,Both,Alter Ego mendapatkan 2 kill namun dibalas dengan double kill oleh Team Liquid,minor,30,652,216,365,71,-0.2285
+E09,675,turtle_spawn_3,,Turtle ketiga muncul,minor,30,655,212,350,93,-0.2107
+E10,713,war_besar_turtle,Both,Team Liquid mengamankan turtle namun Alter Ego menukar dengan 2 kill meskipun kehilangan 1 pemain,major,90,1875,577,1044,254,-0.2491
+E11,832,lord_spawn_1,,Lord pertama muncul dengan skor 8-4 untuk Team Liquid,minor,30,675,234,328,113,-0.1393
+E12,868,pickoff,Alter Ego,Khaleed dan Zhuxin terculik sebelum perebutan lord,minor,30,536,171,291,74,-0.2239
+E13,935,war_besar_lord,Alter Ego,Alter Ego memenangkan war besar lord (3:40:40–3:42:22),major,90,1449,510,750,189,-0.1656
+E14,1012,perubahan_momentum,Alter Ego,Skor menjadi 12-11 dan Alter Ego mulai membalikkan keadaan,major,90,1612,628,812,172,-0.1141
+E15,1068,defend_lord,Team Liquid,Team Liquid berhasil mempertahankan base dari serangan lord,medium,60,1317,474,711,132,-0.18
+E16,1191,lord_spawn_2,,Lord kedua muncul,minor,30,616,145,402,69,-0.4172
+E17,1222,war_besar_lord,Alter Ego,Alter Ego memenangkan war besar perebutan lord kedua,major,90,1802,536,1051,215,-0.2858
+E18,1265,lord_diamankan,Alter Ego,Alter Ego mengamankan lord dengan skor imbang 13-13,medium,60,1128,340,635,153,-0.2615
+E19,1334,defend_lord,Team Liquid,Team Liquid kembali berhasil mempertahankan base dari serangan lord,medium,60,1266,367,748,151,-0.3009
+E20,1436,war_besar_base,Alter Ego,War besar terjadi di lane bawah base Team Liquid,major,90,1961,901,930,130,-0.0148
+E21,1491,match_selesai,Alter Ego,Pertandingan berakhir dengan kemenangan Alter Ego,major,90,1957,1039,812,106,0.116
+E22,1595,highlight_replay,,Cuplikan momen kemenangan ditampilkan,minor,30,682,327,295,60,0.0469
