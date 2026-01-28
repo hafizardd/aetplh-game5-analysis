@@ -1,0 +1,23 @@
+event_id,waktu,event,team,detail
+E01,3:25:30,draft_dimulai,NA,Fase draft Game 5 dimulai
+E02,3:26:17,draft_pick,Alter Ego,Alter Ego memilih hero Uranus
+E03,3:29:27,draft_unpredictable,Alter Ego,Uranus digunakan sebagai jungler dan draft selesai
+E04,3:32:14,turtle_spawn_1,NA,Turtle pertama muncul
+E05,3:32:23,first_blood,Team Liquid,Team Liquid mendapatkan first blood sekaligus turtle pertama
+E06,3:35:53,first_turret,Team Liquid,Team Liquid menghancurkan turret pertama
+E07,3:36:10,kill,Alter Ego,Kill pertama untuk Alter Ego
+E08,3:36:19,skirmish_trade,Both,Alter Ego mendapatkan 2 kill namun dibalas dengan double kill oleh Team Liquid
+E09,3:36:45,turtle_spawn_3,NA,Turtle ketiga muncul
+E10,3:37:23,war_besar_turtle,Both,Team Liquid mengamankan turtle namun Alter Ego menukar dengan 2 kill meskipun kehilangan 1 pemain
+E11,3:39:22,lord_spawn_1,NA,Lord pertama muncul dengan skor 8-4 untuk Team Liquid
+E12,3:39:58,pickoff,Alter Ego,Khaleed dan Zhuxin terculik sebelum perebutan lord
+E13,3:41:05,war_besar_lord,Alter Ego,Alter Ego memenangkan war besar lord (3:40:40–3:42:22)
+E14,3:42:22,perubahan_momentum,Alter Ego,Skor menjadi 12-11 dan Alter Ego mulai membalikkan keadaan
+E15,3:43:18,defend_lord,Team Liquid,Team Liquid berhasil mempertahankan base dari serangan lord
+E16,3:45:21,lord_spawn_2,NA,Lord kedua muncul
+E17,3:45:52,war_besar_lord,Alter Ego,Alter Ego memenangkan war besar perebutan lord kedua
+E18,3:46:35,lord_diamankan,Alter Ego,Alter Ego mengamankan lord dengan skor imbang 13-13
+E19,3:47:44,defend_lord,Team Liquid,Team Liquid kembali berhasil mempertahankan base dari serangan lord
+E20,3:49:26,war_besar_base,Alter Ego,War besar terjadi di lane bawah base Team Liquid
+E21,3:50:21,match_selesai,Alter Ego,Pertandingan berakhir dengan kemenangan Alter Ego
+E22,3:52:05,highlight_replay,NA,Cuplikan momen kemenangan ditampilkan
